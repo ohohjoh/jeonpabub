@@ -1,3 +1,4 @@
+import openai
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
