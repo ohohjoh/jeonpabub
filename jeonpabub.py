@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
+from openai import OpenAI
+
 # ✅ 페이지 설정을 가장 상단에 배치
 st.set_page_config("PDF 문서 분석 챗봇", layout="wide")
 
