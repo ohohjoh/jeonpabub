@@ -85,6 +85,8 @@ def save_to_vector_store(documents: List[Document]) -> None:
 ## 사용자 질문에 대한 RAG 처리
 @st.cache_data
 def process_question(user_question):
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
+    api_key = st.secrets.get("OPENAI_API_KEY", None)
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
     ## 벡터 DB 호출
