@@ -157,6 +157,7 @@ def natural_sort_key(s):
 
 def main():
     openai.api_key = st.secrets["OPENAI_API_KEY"]
+    api_key = st.secrets.get("OPENAI_API_KEY", None)
     if not api_key:
         st.error("❌ OpenAI API 키가 설정되지 않았습니다! `.streamlit/secrets.toml` 파일을 확인하세요.")
     else:
