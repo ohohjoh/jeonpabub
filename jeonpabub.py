@@ -153,6 +153,7 @@ def natural_sort_key(s):
 
 
 def main():
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     left_column, right_column = st.columns([1, 1])
     all_documents = []
     pdf_folder = "PDF_이미지"
